@@ -34,8 +34,11 @@ app.use(routes);
 //   () => console.log('connected to db')
 // );
 
-mongoose.connect(process.env.DB_CONNECTION,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_CONNECTION,
+  { useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false },
   () => console.log('connected to db')
 );
 
