@@ -66,7 +66,7 @@ const MainScreen = () => {
     return (
       <div>
         <Header />
-        <h1> Main Screen Homies!</h1>
+        <h1> Please enter up to 4 Call of Duty Battle.net Id's (Example: Groot#11457)</h1>
         <form onSubmit={onSubmit}>
           <input
             onChange={(evt) => handleFormChange(evt)}
